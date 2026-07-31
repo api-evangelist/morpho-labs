@@ -1,0 +1,16 @@
+generated: '2026-07-20'
+method: generated
+source: graphql/morpho-labs-schema-introspection.json
+notes: >-
+  Packaged Agent Skills for the Morpho public GraphQL API. Every step is grounded
+  in a real GraphQL query field verified in the schema introspection. The API is
+  public (no auth); respect the 750 req/min rate limit and 1,000,000 complexity cap.
+skills:
+  - file: morpho-labs-explore-markets.md
+    name: Explore Morpho Blue markets and rates
+    api: graphql/morpho-labs-schema-introspection.json
+    operations: [markets, marketById, marketCollateralAtRisk]
+  - file: morpho-labs-vault-and-position.md
+    name: Analyze a Morpho Vault and a user position
+    api: graphql/morpho-labs-schema-introspection.json
+    operations: [vaults, vaultByAddress, vaultPosition, marketPositions, userByAddress]

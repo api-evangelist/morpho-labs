@@ -1,0 +1,54 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: graphql/morpho-labs-schema-introspection.json
+notes: >-
+  No official first-party hosted MCP server was found for Morpho as of this
+  pass. This is a DERIVED candidate tool surface mapping the Morpho GraphQL
+  query root to MCP tools, one per top-level query field. Not published by
+  Morpho — a starting point for building an MCP wrapper over api.morpho.org.
+server:
+  name: morpho
+  transport: http
+  endpoint: null
+  wraps: https://api.morpho.org/graphql
+tools:
+  - name: get_chain
+    description: Get a supported chain (or list chains).
+    source_operation: graphql#chain / chains
+  - name: get_asset
+    description: Look up an asset by address, or list assets.
+    source_operation: graphql#assetByAddress / assets
+  - name: get_market
+    description: Look up a Morpho Blue market by id, or list markets with filters.
+    source_operation: graphql#marketById / markets
+  - name: get_market_collateral_at_risk
+    description: Compute collateral at risk for a market at a given price.
+    source_operation: graphql#marketCollateralAtRisk
+  - name: get_market_positions
+    description: Get a user's market position, or list market positions.
+    source_operation: graphql#marketPosition / marketPositions
+  - name: get_vault
+    description: Look up a Morpho Vault (V1) by address, or list vaults.
+    source_operation: graphql#vaultByAddress / vaults
+  - name: get_vault_v2
+    description: Look up a Morpho Vault V2 by address, or list V2 vaults.
+    source_operation: graphql#vaultV2ByAddress / vaultV2s
+  - name: get_vault_positions
+    description: Get a user's vault position, or list vault positions.
+    source_operation: graphql#vaultPosition / vaultPositions / vaultV2PositionByAddress
+  - name: get_curator
+    description: Look up a curator, or list curators.
+    source_operation: graphql#curator / curators
+  - name: get_oracle
+    description: Look up an oracle by address, or list oracles.
+    source_operation: graphql#oracleByAddress / oracles
+  - name: get_user
+    description: Look up a user by address.
+    source_operation: graphql#userByAddress
+  - name: get_morpho_blue
+    description: Look up a Morpho Blue deployment by address, or list deployments.
+    source_operation: graphql#morphoBlueByAddress / morphoBlues
+  - name: list_transactions
+    description: List market and vault transactions and reallocations.
+    source_operation: graphql#marketTransactions / vaultV1Transactions / vaultReallocates / publicAllocatorReallocates

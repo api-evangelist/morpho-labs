@@ -1,0 +1,27 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.morpho.org/tools/offchain/api/get-started/
+api: Morpho API (GraphQL)
+signaling: HTTP 429 Too Many Requests on breach
+notes: >-
+  Published thresholds for the public GraphQL API. Sustained or repeated abuse
+  can trigger multi-day cooldowns or permanent denial. Query cost is also bound
+  by a GraphQL complexity limit.
+rate_limits:
+  - name: Standard
+    limit_count: 750
+    window: minute
+    scope: per-client
+    response: 429 Too Many Requests
+  - name: Severe abuse threshold
+    limit_count: 20000
+    window: hour
+    scope: per-client
+    response: extended cooldown / temporary block
+complexity:
+  max_query_complexity: 1000000
+  base_operation_cost: 10
+  source: https://docs.morpho.org/tools/offchain/api/changelog
+search_constraints:
+  numberOfResults_range: [0, 1000]
+  numberOfResults_default: 5

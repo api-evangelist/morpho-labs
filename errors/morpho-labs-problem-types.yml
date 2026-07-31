@@ -1,0 +1,44 @@
+generated: '2026-07-20'
+method: derived
+source: https://docs.morpho.org/tools/offchain/api/get-started/
+api: Morpho API (GraphQL)
+format: graphql-errors
+envelope:
+  detail: >-
+    GraphQL responses carry a top-level `errors[]` array (each with message,
+    optional path, and extensions) alongside partial `data`. Transport-level
+    failures use standard HTTP status codes. Because this is GraphQL, most
+    request errors return HTTP 200 with the error described in `errors[]`;
+    rate-limiting is signaled at the transport layer with 429.
+problems:
+  - class: rate-limit
+    http_status: 429
+    title: Too Many Requests
+    remediation: >-
+      Back off; standard limit is 750 requests/minute. Repeated abuse (~20k/hr)
+      can trigger multi-day cooldowns or permanent denial.
+  - class: query-complexity
+    http_status: 200
+    envelope: errors[]
+    title: Query complexity exceeded
+    remediation: >-
+      Reduce requested fields/nesting. Max complexity is 1,000,000 with base
+      operation cost 10; split into smaller queries or paginate.
+  - class: validation
+    http_status: 200
+    envelope: errors[]
+    title: Invalid argument / bad input
+    remediation: >-
+      Correct query arguments (e.g. numberOfResults must be within [0, 1000]);
+      ensure required filters and chainId are provided.
+  - class: not-found
+    http_status: 200
+    envelope: data (null) + errors[]
+    title: Resource not found
+    remediation: >-
+      Address/id lookups (marketById, vaultByAddress, userByAddress, ...) return
+      null / an error when the entity is not indexed on the given chain.
+  - class: server-error
+    http_status: 500
+    title: Internal server error
+    remediation: Retry with backoff; check https://status.morpho.org/ for incidents.

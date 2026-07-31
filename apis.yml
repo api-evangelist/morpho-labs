@@ -1,7 +1,28 @@
 aid: morpho-labs
 name: Morpho Labs
-description: Morpho Labs is a company surfaced as a portfolio company of a16z and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Morpho Labs builds Morpho, an open, non-custodial onchain credit network for
+  the Ethereum Virtual Machine. The protocol pairs Morpho Blue (a trustless,
+  oracle-agnostic, permissionless lending primitive with isolated markets),
+  Morpho Vaults (permissionless, curator-managed yield vaults that allocate
+  deposits across markets), and Midnight (fixed-rate markets). For developers,
+  Morpho publishes a public GraphQL API at api.morpho.org that indexes onchain
+  and offchain data for markets, vaults, positions, curators, oracles, assets,
+  rewards, and transactions, plus a suite of TypeScript SDKs for building and
+  simulating transactions, and detailed documentation at docs.morpho.org.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://evcop6xwrqrpqrf9.public.blob.vercel-storage.com/globals/morpho-thumbnail.1l1vc.png
 url: https://raw.githubusercontent.com/api-evangelist/morpho-labs/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,10 +32,106 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 2
+  pass: local-v1
 tags:
 - Company
-apis: []
+- DeFi
+- Lending
+- Blockchain
+- Ethereum
+- GraphQL
+- Onchain Data
+- Financial Services
+- Web3
+- Crypto
+apis:
+- name: Morpho API
+  description: >-
+    Morpho's public GraphQL API providing real-time and historical onchain and
+    offchain data across Morpho Blue markets, Morpho Vaults (V1 and V2),
+    Midnight fixed-rate markets, user positions, curators, oracles, assets,
+    rewards, and transactions. A single GraphQL endpoint with an interactive
+    playground; a REST interface is also available for Blue and Midnight data.
+    No authentication is required; usage is rate limited to 750 requests/minute
+    with a maximum query complexity of 1,000,000. Provided as-is with no SLA.
+  humanURL: https://docs.morpho.org/tools/offchain/api/get-started/
+  baseURL: https://api.morpho.org/graphql
+  tags:
+  - GraphQL
+  - DeFi
+  - Lending
+  - Onchain Data
+  properties:
+  - type: GraphQL
+    url: graphql/morpho-labs-schema-introspection.json
+  - type: Documentation
+    url: https://docs.morpho.org/tools/offchain/api/get-started/
+  - type: APIReference
+    url: https://docs.morpho.org/tools/offchain/api/morpho/
+  - type: Playground
+    url: https://api.morpho.org/graphql
+common:
+- type: DomainSecurity
+  url: security/morpho-labs-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/morpho-labs-vulnerability-disclosure.yml
+- type: Security
+  url: https://docs.morpho.org/morpho/concepts/security/bug-bounty/
+- type: Website
+  url: https://morpho.org/
+- type: DeveloperPortal
+  url: https://docs.morpho.org/
+- type: Documentation
+  url: https://docs.morpho.org/
+- type: APIReference
+  url: https://docs.morpho.org/tools/offchain/api/morpho/
+- type: GettingStarted
+  url: https://docs.morpho.org/tools/offchain/api/get-started/
+- type: GitHubOrganization
+  url: https://github.com/morpho-org
+- type: Blog
+  url: https://morpho.org/blog/category/101-content/
+- type: Support
+  url: https://morpho.org/faq/
+- type: StatusPage
+  url: https://status.morpho.org/
+- type: TermsOfService
+  url: https://morpho.org/terms-of-use/
+- type: PrivacyPolicy
+  url: https://morpho.org/privacy-policy/
+- type: SDKs
+  url: packages/morpho-labs-packages.yml
+- type: Packages
+  url: packages/morpho-labs-packages.yml
+- type: LLMsTxt
+  url: llms/morpho-labs-llms.txt
+- type: Authentication
+  url: authentication/morpho-labs-authentication.yml
+- type: Conventions
+  url: conventions/morpho-labs-conventions.yml
+- type: RateLimits
+  url: rate-limits/morpho-labs-rate-limits.yml
+- type: Lifecycle
+  url: lifecycle/morpho-labs-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/morpho-labs-lifecycle.yml
+- type: ChangeLog
+  url: changelog/morpho-labs-changelog.yml
+- type: ErrorCatalog
+  url: errors/morpho-labs-problem-types.yml
+- type: Conformance
+  url: conformance/morpho-labs-conformance.yml
+- type: DataModel
+  url: data-model/morpho-labs-data-model.yml
+- type: MCPServer
+  url: mcp/morpho-labs-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

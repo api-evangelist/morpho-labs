@@ -1,0 +1,82 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/morpho-org/sdks
+notes: >-
+  First-party TypeScript SDKs published under the @morpho-org npm scope. The
+  suite spans the GraphQL API client (blue-api-sdk), framework-agnostic entity
+  classes (blue-sdk), viem-based fetchers/bundlers, simulation, and the
+  higher-level morpho-sdk transaction-builder abstraction.
+packages:
+  - language: typescript
+    registry: npm
+    name: "@morpho-org/morpho-sdk"
+    url: https://www.npmjs.com/package/@morpho-org/morpho-sdk
+    install: npm install @morpho-org/morpho-sdk
+    description: >-
+      High-level abstraction that builds ready-to-send transactions for VaultV1,
+      VaultV2, and Blue across EVM chains.
+    official: true
+  - language: typescript
+    registry: npm
+    name: "@morpho-org/blue-api-sdk"
+    url: https://www.npmjs.com/package/@morpho-org/blue-api-sdk
+    install: npm install @morpho-org/blue-api-sdk
+    description: GraphQL client for the Morpho API with generated types and an Apollo cache controller.
+    official: true
+  - language: typescript
+    registry: npm
+    name: "@morpho-org/blue-sdk"
+    url: https://www.npmjs.com/package/@morpho-org/blue-sdk
+    install: npm install @morpho-org/blue-sdk
+    description: Framework-agnostic entity classes for Morpho Blue markets, vaults, and positions.
+    official: true
+  - language: typescript
+    registry: npm
+    name: "@morpho-org/blue-sdk-viem"
+    url: https://www.npmjs.com/package/@morpho-org/blue-sdk-viem
+    install: npm install @morpho-org/blue-sdk-viem
+    description: Augments the core Blue SDK with viem-based onchain fetch capabilities.
+    official: true
+  - language: typescript
+    registry: npm
+    name: "@morpho-org/bundler-sdk-viem"
+    url: https://www.npmjs.com/package/@morpho-org/bundler-sdk-viem
+    install: npm install @morpho-org/bundler-sdk-viem
+    description: Transforms Morpho interactions into transaction bundles with approvals and transfers.
+    official: true
+  - language: typescript
+    registry: npm
+    name: "@morpho-org/liquidity-sdk-viem"
+    url: https://www.npmjs.com/package/@morpho-org/liquidity-sdk-viem
+    install: npm install @morpho-org/liquidity-sdk-viem
+    description: Calculates liquidity availability through the PublicAllocator.
+    official: true
+  - language: typescript
+    registry: npm
+    name: "@morpho-org/midnight-sdk"
+    url: https://www.npmjs.com/package/@morpho-org/midnight-sdk
+    install: npm install @morpho-org/midnight-sdk
+    description: Protocol utilities and API helpers for Morpho Midnight fixed-rate markets.
+    official: true
+  - language: typescript
+    registry: npm
+    name: "@morpho-org/morpho-ts"
+    url: https://www.npmjs.com/package/@morpho-org/morpho-ts
+    install: npm install @morpho-org/morpho-ts
+    description: Time and number/format handling utilities used across the SDK suite.
+    official: true
+  - language: typescript
+    registry: npm
+    name: "@morpho-org/evm-simulation"
+    url: https://www.npmjs.com/package/@morpho-org/evm-simulation
+    install: npm install @morpho-org/evm-simulation
+    description: EVM simulation engine with Tenderly support.
+    official: true
+  - language: typescript
+    registry: npm
+    name: "@morpho-org/wdk-protocol-lending-morpho-evm"
+    url: https://www.npmjs.com/package/@morpho-org/wdk-protocol-lending-morpho-evm
+    install: npm install @morpho-org/wdk-protocol-lending-morpho-evm
+    description: Bridges the Tether Wallet Development Kit to the Morpho SDK (supply, withdraw, borrow, repay).
+    license: Apache-2.0
+    official: true

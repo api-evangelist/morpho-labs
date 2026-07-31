@@ -1,0 +1,24 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.morpho.org/tools/offchain/api/changelog
+api: Morpho API (GraphQL)
+versioning:
+  scheme: continuous-schema
+  current: unversioned
+  detail: >-
+    The GraphQL schema is evolved in place. There is no path/header version;
+    breaking changes are staged as field deprecations with a published removal
+    date in the API changelog.
+deprecation:
+  policy: >-
+    Fields are marked deprecated (GraphQL deprecationReason) and removed on a
+    scheduled date announced in the changelog. Recent cycles have removed dozens
+    of fields at a time (e.g. ~130 fields in the May 2026 cycle) as identifiers
+    move from compound/ID formats to address-based references.
+  docs: https://docs.morpho.org/tools/offchain/api/changelog
+  mechanism: GraphQL field deprecation + dated changelog removal notices
+sla:
+  provided: false
+  detail: The Morpho API is provided as-is, without a Service Level Agreement (SLA).
+status_page: https://status.morpho.org/
+data_page: https://data.morpho.org/

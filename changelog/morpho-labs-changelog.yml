@@ -1,0 +1,58 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.morpho.org/tools/offchain/api/changelog
+api: Morpho API (GraphQL)
+scheme: dated-deprecation-notices
+current_version: unversioned (continuous schema)
+notes: >-
+  The Morpho API changelog is a forward-looking deprecation calendar: each entry
+  announces fields scheduled for removal on a date (with alternatives), plus
+  operational limits. Recent window captured below; the live changelog is the
+  source of truth.
+entries:
+  - date: '2026-10-21'
+    breaking: true
+    highlights: >-
+      Six deprecated fields to be removed, including Asset.priceUsd,
+      Market.oracleAddress, Market.targetBorrowUtilization,
+      Market.targetWithdrawUtilization, and vault forum-link fields.
+  - date: '2026-09-30'
+    breaking: true
+    highlights: Eleven fields scheduled for removal (asset price/supply, vault APY metrics, market state reward calcs).
+  - date: '2026-08-26'
+    breaking: true
+    highlights: Eleven fields marked for removal (market APY fields, oracle query operations, vault factory queries).
+  - date: '2026-07-29'
+    breaking: true
+    highlights: >-
+      Six fields scheduled for removal (asset whitelist status, market creator
+      reference, transaction queries consolidated into specialized endpoints).
+  - date: '2026-06-24'
+    breaking: true
+    highlights: ~45 fields targeted for removal; identifiers move from compound formats to address-based references.
+  - date: '2026-05-20'
+    breaking: true
+    highlights: >-
+      Large deprecation cycle (~130 fields); whitelisted -> listed terminology,
+      APY fields restructured into state objects, ID-based queries replaced with
+      address-based ones.
+  - date: '2026-05-06'
+    breaking: true
+    highlights: Legacy rewards API deprecated; rewards migrated from Universal Rewards Distributor (URD) to Merkl.
+  - date: '2026-04-23'
+    breaking: true
+    highlights: Vault V1 admin-address time-series fields deprecated; use adminEvents queries.
+  - date: '2026-04-02'
+    breaking: true
+    highlights: >-
+      First scheduled removal batch of fields deprecated 1+ year (asset, market,
+      vault, curator) and removal of PnL/return-on-equity fields.
+  - date: '2025-10-16'
+    breaking: false
+    highlights: Max GraphQL query complexity set to 1,000,000 with a base operation cost of 10.
+  - date: '2025-09-20'
+    breaking: false
+    highlights: Search numberOfResults parameter bounded to [0, 1000] with default 5.
+  - date: '2025-09-19'
+    breaking: true
+    highlights: Four reward calculation fields (returning zero post-Merkl) marked for removal.

@@ -1,0 +1,253 @@
+Append `.md` to any docs page URL below for its raw Markdown (e.g. `https://docs.morpho.org/get-started.md`), or fetch the whole corpus at `https://docs.morpho.org/llms-full.txt`.
+
+# Morpho Docs
+
+> Documentation for Morpho — the open credit network.
+
+- Get Started
+
+  - **Introduction**
+  - [Morpho](/get-started)
+  - [Products](/get-started/products): Build powerful financial applications with Morpho's decentralized lending infrastructure.
+  - [Customer Stories](/get-started/customer-stories): Powering builders of tomorrow's finance.
+
+  - **Resources**
+  - [Whitepapers](/get-started/resources/whitepapers)
+  - [Morpho Apps](/get-started/resources/app-ecosystem)
+  - [Contract Addresses](/developers/contracts/addresses)
+  - [Morpho Blog](https://morpho.org/blog/category/101-content/)
+  - [Landing Page](https://morpho.org/)
+  - [Data Page](https://data.morpho.org/)
+  - [Brand Assets](https://brand.morpho.org/)
+  - [FAQ](https://morpho.org/faq/)
+  - [Disclaimer](https://morpho.org/disclaimers/)
+- Learn
+  - [Introduction](/learn)
+
+  - **Fixed Rate Markets (Midnight)**
+  - [What is Midnight?](/learn/concepts/midnight)
+  - [Offers](/learn/concepts/midnight/offers)
+  - [Liquidation](/learn/concepts/midnight/liquidations)
+  - [Gates](/learn/concepts/midnight/gates)
+
+  - **Variable Rate Markets (Blue)**
+  - [What is Blue?](/learn/concepts/blue)
+  - [Interest Rate Model](/learn/concepts/irm)
+  - [Liquidation](/learn/concepts/liquidation)
+
+  - **Vaults**
+  - [Vault V2](/learn/concepts/vault-v2)
+  - [Curator](/learn/concepts/curator)
+
+  - **Protocol Utilities**
+  - [Oracle](/learn/concepts/oracle)
+  - [Rewards](/learn/concepts/rewards)
+  - [Bundlers](/learn/concepts/bundlers)
+
+  - **Governance**
+  - [Organization](/learn/governance/organization)
+  - [MORPHO Token](/learn/governance/morpho-token)
+
+  - **Resources**
+  - [Risks](/learn/resources/risks)
+  - [Audits](/get-started/resources/audits/)
+  - [Formal Verification](/learn/resources/formal-verification)
+- Curate
+  - [Overview](/curate)
+
+  - **Concepts**
+  - [Roles](/curate/concepts/roles)
+  - [Liquidity Curation](/curate/concepts/liquidity)
+  - [Yield](/curate/concepts/yield)
+  - [Fee](/curate/concepts/fee)
+  - [Timelock](/curate/concepts/timelock)
+  - [Gates](/curate/concepts/gates)
+  - [Adapter Registry](/curate/concepts/adapter-registry)
+  - [Security Considerations](/curate/concepts/security-considerations)
+
+  - **Tutorials Vault V2**
+  - [Create Vault](/curate/tutorials-v2/vault-creation)
+  - [Vault V2 Dead Deposit](/curate/tutorials-v2/dead-deposit)
+  - [Curate Roles](/curate/tutorials-v2/roles)
+  - [Sentinel Actions](/curate/tutorials-v2/sentinel)
+  - [Liquidity Curation](/curate/tutorials-v2/liquidity-curation)
+  - [(De)List Adapters](/curate/tutorials-v2/listing-adapters)
+  - [(De)List Markets](/curate/tutorials-v2/market-listing)
+  - [Vault V1 Adapter Migration](/curate/tutorials-v2/vault-v1-adapter-migration)
+  - [Abdicate Gates](/curate/tutorials-v2/abdicate-gates)
+  - [Configuration Checklist](/curate/tutorials-v2/checklist)
+  - [Bad Debt Consideration](/curate/tutorials-v2/bad-debt)
+  - [Unwind Vault V2](/curate/tutorials-v2/unwind-vault-v2)
+  - [Emergency](/curate/tutorials-v2/emergency)
+
+  - **Tutorials Variable Rate Market**
+  - [Deploy Oracle](/curate/tutorials-market-v1/deploying-oracle)
+  - [Create Market](/curate/tutorials-market-v1/creating-market)
+  - [Set Rate at Target](/curate/tutorials-market-v1/setting-rate)
+  - [Variable Rate Market Dead Deposit](/curate/tutorials-market-v1/dead-deposit)
+  - [Permissioned assets](/curate/tutorials-market-v1/permissioned-assets)
+
+  - **Legacy Tutorials Vault V1**
+  - [Create Vault](/curate/tutorials-v1/vault-creation)
+  - [Vault V1 Dead Deposit](/curate/tutorials-v1/dead-deposit)
+  - [Curate Roles](/curate/tutorials-v1/roles)
+  - [Manage Markets](/curate/tutorials-v1/manage-markets)
+  - [Manage Allocations](/curate/tutorials-v1/manage-allocations)
+  - [Set Up Public Allocator](/curate/tutorials-v1/public-allocator)
+  - [Configuration Checklist](/curate/tutorials-v1/checklist)
+  - [Manage Bad Debt](/curate/tutorials-v1/bad-debt)
+  - [Unwind Vault V1](/curate/tutorials-v1/unwind-vault-v1)
+  - [Emergency](/curate/tutorials-v1/emergency)
+  - [The Morpho Tool Suite](/curate/tool-suite)
+- Developers
+  - [Developers](/developers): Build on Morpho with product integrations, data tools, and open-source examples.
+
+  - **Products**
+  - Fixed Rate Markets (Midnight)
+    - [Get Started](/developers/midnight/get-started)
+    - Concepts
+      - [Market Mechanics](/developers/midnight/concepts/market-mechanics)
+      - [Collateral, Health, Liquidations](/developers/midnight/concepts/collateral-health-liquidations)
+      - [Mempool & Router](/developers/midnight/concepts/mempool-router)
+      - [Multi-Market Offers](/developers/midnight/concepts/multi-market-offers)
+      - [Tick Structure](/developers/midnight/concepts/tick-structure)
+      - [Fees](/developers/midnight/concepts/fees)
+    - Tutorials
+      - [Lend at a fixed rate](/developers/midnight/tutorials/lend-at-a-fixed-rate)
+      - [Borrow at a fixed rate](/developers/midnight/tutorials/borrow-at-a-fixed-rate)
+      - [Exit borrow at maturity](/developers/midnight/tutorials/exit-borrow-by-repaying-in-full-at-maturity)
+    - [Resources](/developers/midnight/resources/all)
+  - Earn - Morpho Vaults V2
+    - [Get Started](/developers/earn/get-started)
+    - Concepts
+      - [Vaults & ERC4626 Mechanics](/developers/earn/concepts/vault-mechanics)
+      - [Yield & Fees](/developers/earn/concepts/yield-fees)
+      - [Rewards for Lenders](/developers/earn/concepts/rewards)
+      - [How can distributors generate revenue on Morpho?](/developers/earn/concepts/generate-revenue)
+      - [Fee Wrapper](/developers/earn/concepts/fee-wrapper)
+      - [Wallet Structures](/developers/earn/concepts/wallet-structures)
+    - Tutorials
+      - [Depositing & Withdrawing from Vaults](/developers/earn/tutorials/assets-flow)
+      - [Get Data](/developers/earn/tutorials/get-data)
+      - [Integrate Rewards for Earn Products](/developers/earn/tutorials/rewards)
+    - [Resources](/developers/earn/resources/all)
+  - Borrow - Variable Rate Market (Blue)
+    - [Get Started](/developers/borrow/get-started)
+    - Concepts
+      - [Market Mechanics](/developers/borrow/concepts/market-mechanics)
+      - [Collateral, LTV & Health](/developers/borrow/concepts/ltv)
+      - [Interest Rates](/developers/borrow/concepts/interest-rates)
+      - [Liquidation](/developers/borrow/concepts/liquidation)
+      - [Rewards for Borrowers](/developers/borrow/concepts/rewards)
+      - [Public Allocator: Just-in-Time Liquidity](/developers/borrow/concepts/public-allocator)
+    - Tutorials
+      - [Supply Collateral, Borrow, Repay & Withdraw Collateral](/developers/borrow/tutorials/assets-flow)
+      - [Get Data](/developers/borrow/tutorials/get-data)
+      - [Integrate Rewards for Borrow Products](/developers/borrow/tutorials/rewards)
+      - [Triggering the Public Allocator](/developers/borrow/tutorials/public-allocator)
+    - Guides
+      - [Guide: How to Monetize Your Borrow Product](/developers/borrow/guides/monetize-borrow-product)
+      - [Guide: Integrating Gasless Crypto-Backed Loans with Gelato](/developers/borrow/guides/gelato)
+    - [Resources](/developers/borrow/resources/all)
+  - Rewards
+    - [Get Started](/developers/rewards/get-started)
+    - Concepts
+      - [Reward Campaigns on Morpho](/developers/rewards/concepts/reward-campaigns)
+      - [Merkl Distribution System](/developers/rewards/concepts/distribution-system)
+    - Tutorials
+      - [Create a Rewards Program](/developers/rewards/tutorials/create-program)
+      - [Fetch Rewards Data](/developers/rewards/tutorials/fetch-rewards-data)
+      - [Claim Rewards](/developers/rewards/tutorials/claim-rewards)
+      - [Integrate Rewards Display](/developers/rewards/tutorials/integrate-display)
+    - Guides
+      - [Complete Integration Example](/developers/rewards/guides/complete-integration)
+    - [Resources](/developers/rewards/resources/all)
+
+  - **Integration Methods**
+  - API
+    - [Get Started](/developers/api/get-started)
+    - [Morpho Midnight](/developers/api/morpho-midnight)
+    - [Morpho Blue](/developers/api/morpho)
+    - [Morpho Vaults](/developers/api/morpho-vaults)
+    - [Public Allocator](/developers/api/public-allocator)
+    - [Rewards](/developers/api/rewards)
+    - [Changelog](/developers/api/changelog)
+  - SDKs
+    - [Get Started](/developers/sdks/get-started)
+    - [Morpho SDK](/developers/sdks/morpho-sdk)
+    - [Midnight SDK](/developers/sdks/midnight-sdk)
+  - Contracts
+    - [Morpho Contracts](/developers/contracts)
+    - [Addresses](/developers/contracts/addresses)
+    - [Morpho](/developers/contracts/morpho)
+    - [Morpho Vaults V2](/developers/contracts/morpho-vaults-v2)
+    - [MorphoMarketV1AdapterV2](/developers/contracts/morpho-market-v1-adapter-v2)
+    - [Oracles](/developers/contracts/oracles)
+    - [Interest Rate Models](/developers/contracts/irm)
+    - [Public Allocator](/developers/contracts/public-allocator)
+    - [Bundler3](/developers/contracts/bundlers)
+    - [Universal Rewards Distributors (Deprecated)](/developers/contracts/rewards)
+    - [Morpho V0 (Optimizers - Deprecated)](/developers/contracts/morpho-v0)
+  - Agents
+    - [Get Started](/developers/agents/get-started): Connect Claude Code, Codex, or Cursor to Morpho — query vaults, markets, and positions, and prepare unsigned transactions from your agent.
+    - [Morpho MCP](/developers/agents/mcp): Morpho's hosted MCP server — query vaults, markets, and positions, and prepare unsigned transactions from any MCP-compatible agent.
+    - [CLI & Skills](/developers/agents/cli): Drive Morpho from the terminal with @morpho-org/cli, and give your coding agent the morpho-cli and morpho-builder skills.
+    - [llms.txt](/developers/agents/llms)
+
+  - **Ecosystem**
+  - [Oracles](/developers/ecosystem/oracles)
+  - [Liquidation Bots](/developers/ecosystem/liquidation-bots)
+  - [Data Dashboards](/developers/ecosystem/data-dashboards)
+  - Examples
+    - [Fallback App](https://github.com/morpho-org/morpho-blue-offchain-public/tree/main/apps/fallback)
+    - [Lite App](https://github.com/morpho-org/morpho-lite-apps/tree/main/apps/lite)
+    - [Liquidation Bot](https://github.com/morpho-org/morpho-blue-liquidation-bot)
+    - [Vault V2 Reallocation Bot](https://github.com/morpho-org/vault-v2-reallocation-bot)
+    - [Indexer Template](https://github.com/morpho-org/ponder-template)
+- API Reference
+  - Midnight
+    - Transactions
+      - [List market transactions](/api/midnight/transactions/list-market-transactions)
+      - [List user transactions](/api/midnight/transactions/list-user-transactions)
+    - Markets
+      - [List markets](/api/midnight/markets/list-markets)
+      - [Get market](/api/midnight/markets/get-market)
+      - [Get market state](/api/midnight/markets/get-market-state)
+    - Positions
+      - [List positions](/api/midnight/positions/list-positions)
+      - [List market positions](/api/midnight/positions/list-market-positions)
+      - [Get position](/api/midnight/positions/get-position)
+      - [Get Midnight position performance](/api/midnight/positions/get-midnight-position-performance)
+    - Offer Groups
+      - [List active Midnight offer groups for a user](/api/midnight/offer-groups/list-active-midnight-offer-groups-for-a-user)
+    - Books
+      - [List books](/api/midnight/books/list-books)
+      - [Get book](/api/midnight/books/get-book)
+      - [List book price levels](/api/midnight/books/list-book-price-levels)
+      - [List book takeable offers](/api/midnight/books/list-book-takeable-offers)
+      - [Get quote](/api/midnight/books/get-quote)
+      - [List maker takeable offers](/api/midnight/books/list-maker-takeable-offers)
+    - Mempool
+      - [Validate a mempool payload](/api/midnight/mempool/validate-a-mempool-payload)
+  - Vaults V2
+    - [User V2 vault position](/api/vaults-v2/user-v2-vault-position)
+    - [User V2 vault position performance](/api/vaults-v2/user-v2-vault-position-performance)
+    - [Get V2 vault](/api/vaults-v2/get-v2-vault)
+    - [Get V2 vault state](/api/vaults-v2/get-v2-vault-state)
+    - [Get V2 vault realized average APY](/api/vaults-v2/get-v2-vault-realized-average-apy)
+  - Vaults V1
+    - [User V1 vault position](/api/vaults-v1/user-v1-vault-position)
+    - [User V1 vault position performance](/api/vaults-v1/user-v1-vault-position-performance)
+    - [Get V1 vault](/api/vaults-v1/get-v1-vault)
+    - [Get V1 vault state](/api/vaults-v1/get-v1-vault-state)
+    - [Get V1 vault realized average APY](/api/vaults-v1/get-v1-vault-realized-average-apy)
+  - Oracles
+    - [Get oracle state](/api/oracles/get-oracle-state)
+- [Getting started](/getting-started): How to run and author the documentation app locally.
+- Bundlers
+  - Functions
+    - [Functions](/bundlers/functions)
+    - Function 1
+      - [Function 1](/bundlers/functions/function-1)
+    - Function 2
+      - [Function 2](/bundlers/functions/function-2)

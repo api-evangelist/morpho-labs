@@ -1,0 +1,109 @@
+generated: '2026-07-20'
+method: derived
+source: graphql/morpho-labs-schema-introspection.json
+api: Morpho API (GraphQL)
+notes: >-
+  Entity-relationship graph derived from the Morpho GraphQL schema's query root
+  and object types. Identifiers are onchain EVM addresses (and chainId); most
+  relationships are expressed as nested object fields keyed by address.
+entities:
+  - name: Chain
+    id: chainId
+    query: [chain, chains]
+  - name: Asset
+    id: address
+    query: [assetByAddress, assets]
+  - name: MorphoBlue
+    id: address
+    description: A Morpho Blue protocol deployment (singleton lending contract) per chain.
+    query: [morphoBlueByAddress, morphoBlues]
+  - name: Market
+    id: uniqueKey/id
+    description: An isolated Morpho Blue lending market (loan asset, collateral asset, oracle, IRM, LLTV).
+    query: [marketById, markets, marketCollateralAtRisk]
+  - name: MarketPosition
+    id: (user, market)
+    query: [marketPosition, marketPositions]
+  - name: Vault
+    id: address
+    description: Morpho Vault V1 (curator-managed allocation across markets).
+    query: [vaultByAddress, vaults]
+  - name: VaultV2
+    id: address
+    query: [vaultV2ByAddress, vaultV2s]
+  - name: VaultPosition
+    id: (user, vault)
+    query: [vaultPosition, vaultPositions, vaultV2PositionByAddress]
+  - name: Curator
+    id: address
+    query: [curator, curators]
+  - name: Oracle
+    id: address
+    query: [oracleByAddress, oracles]
+  - name: User
+    id: address
+    query: [userByAddress]
+  - name: Transaction
+    description: Market and vault transaction/reallocation event streams.
+    query: [marketTransactions, vaultV1Transactions, vaultReallocates, publicAllocatorReallocates, vaultV2transactions, vaultV2AllocationTransactions]
+relationships:
+  - from: Market
+    to: Chain
+    kind: belongs_to
+    via: chainId
+  - from: Market
+    to: Asset
+    kind: has_one
+    via: loanAsset
+  - from: Market
+    to: Asset
+    kind: has_one
+    via: collateralAsset
+  - from: Market
+    to: Oracle
+    kind: belongs_to
+    via: oracle
+  - from: Market
+    to: MorphoBlue
+    kind: belongs_to
+    via: morphoBlue
+  - from: MarketPosition
+    to: Market
+    kind: belongs_to
+    via: market
+  - from: MarketPosition
+    to: User
+    kind: belongs_to
+    via: user
+  - from: Vault
+    to: Asset
+    kind: belongs_to
+    via: asset
+  - from: Vault
+    to: Chain
+    kind: belongs_to
+    via: chainId
+  - from: Vault
+    to: Market
+    kind: has_many
+    via: allocations
+  - from: Vault
+    to: Curator
+    kind: belongs_to
+    via: curator
+  - from: VaultPosition
+    to: Vault
+    kind: belongs_to
+    via: vault
+  - from: VaultPosition
+    to: User
+    kind: belongs_to
+    via: user
+  - from: Curator
+    to: Vault
+    kind: has_many
+    via: vaults
+  - from: Oracle
+    to: Chain
+    kind: belongs_to
+    via: chainId

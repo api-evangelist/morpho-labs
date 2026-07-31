@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: derived
+source: graphql/morpho-labs-schema-introspection.json
+api: Morpho API (GraphQL)
+standards:
+  - id: graphql
+    conforms: true
+    evidence: Public GraphQL endpoint at api.morpho.org/graphql with full introspection (305 types).
+  - id: graphql-introspection
+    conforms: true
+    evidence: Standard __schema introspection is enabled and served.
+  - id: rest
+    conforms: true
+    evidence: Docs advertise a REST interface for Blue and Midnight markets/vaults/positions.
+  - id: oauth2
+    conforms: false
+    evidence: No authentication; public read API.
+  - id: oidc
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Uses native GraphQL errors[] envelope, not application/problem+json.
+  - id: cursor-pagination
+    conforms: false
+    evidence: Uses offset/limit (first/skip) pagination with a PageInfo count object, not Relay cursor connections.

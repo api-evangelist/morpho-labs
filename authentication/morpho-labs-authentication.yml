@@ -1,0 +1,16 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.morpho.org/tools/offchain/api/get-started/
+docs: https://docs.morpho.org/tools/offchain/api/get-started/
+api: Morpho API (GraphQL)
+summary:
+  types: [none]
+  auth_required: false
+  notes: >-
+    The Morpho public GraphQL API requires no API key, token, or OAuth flow —
+    read access to markets, vaults, positions, and onchain/offchain data is
+    open. Access is governed by rate limiting (750 req/min) and query-complexity
+    limits rather than authentication. Onchain write operations are executed by
+    the caller's own EVM wallet via the SDKs (transaction signing happens
+    client-side against the smart contracts, not against an authenticated API).
+schemes: []

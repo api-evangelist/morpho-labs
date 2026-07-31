@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: probed
+source: live probe of /.well-known/ discovery paths on apis.yml + servers hosts
+summary: >-
+  No /.well-known/ discovery documents are published on any Morpho host. The
+  Morpho API is a public, unauthenticated GraphQL endpoint, so there is no
+  OIDC/OAuth authorization-server metadata to advertise, and no security.txt or
+  api-catalog is served. Absence recorded as honest probe data.
+hosts:
+  - host: https://morpho.org
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+  - host: https://docs.morpho.org
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+  - host: https://api.morpho.org
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}

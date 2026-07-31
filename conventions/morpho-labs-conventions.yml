@@ -1,0 +1,59 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.morpho.org/tools/offchain/api/get-started/
+api: Morpho API (GraphQL)
+authentication:
+  style: none
+  detail: Public read API; no key/token required. See authentication/morpho-labs-authentication.yml
+transport:
+  protocol: GraphQL
+  endpoint: https://api.morpho.org/graphql
+  also_available: REST (Blue and Midnight markets, vaults, positions)
+  playground: https://api.morpho.org/graphql
+pagination:
+  style: offset-and-limit
+  params:
+    first: number of items to return
+    skip: number of items to skip
+  response_fields:
+    items: node list
+    pageInfo: { countTotal, count, limit, skip }
+  notes: >-
+    List queries (markets, vaults, marketPositions, vaultPositions, ...) accept
+    first/skip pagination and expose a PageInfo object with countTotal/count.
+filtering_and_ordering:
+  where: per-query filter input objects (e.g. MarketFilters, VaultFilters)
+  orderBy: enum order fields per collection
+  orderDirection: [Asc, Desc]
+multichain:
+  param: chainId
+  detail: Most queries accept a chainId argument to scope to a supported EVM chain.
+idempotency:
+  supported: false
+  detail: >-
+    Read-only GraphQL API; no idempotency-key contract. State-changing actions
+    are onchain EVM transactions signed by the caller and are idempotent at the
+    protocol level via nonces, not via an API idempotency key.
+error_envelope:
+  style: graphql
+  detail: >-
+    Errors are returned in the standard GraphQL top-level `errors[]` array
+    (message, path, extensions) alongside partial `data`. HTTP 429 is returned
+    for rate-limit breaches. See errors/morpho-labs-problem-types.yml
+rate_limit_signaling:
+  limit: 750 requests/minute
+  breach_status: 429
+  complexity_limit: 1000000
+  detail: See rate-limits/morpho-labs-rate-limits.yml
+versioning:
+  scheme: continuous
+  detail: >-
+    No URL/header API version. The schema evolves continuously; fields are
+    deprecated with a stated removal date and communicated via the API
+    changelog. See lifecycle/morpho-labs-lifecycle.yml and
+    changelog/morpho-labs-changelog.yml
+cross_links:
+  authentication: authentication/morpho-labs-authentication.yml
+  errors: errors/morpho-labs-problem-types.yml
+  lifecycle: lifecycle/morpho-labs-lifecycle.yml
+  rate_limits: rate-limits/morpho-labs-rate-limits.yml
