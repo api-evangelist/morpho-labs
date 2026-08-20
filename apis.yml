@@ -45,6 +45,17 @@ tags:
 - Blockchain
 - Ethereum
 - GraphQL
+- On-Chain Data
+- Financial-Services
+- Web3
+- Crypto
+tags_raw:
+- Company
+- DeFi
+- Lending
+- Blockchain
+- Ethereum
+- GraphQL
 - Onchain Data
 - Financial Services
 - Web3
@@ -62,6 +73,11 @@ apis:
   humanURL: https://docs.morpho.org/tools/offchain/api/get-started/
   baseURL: https://api.morpho.org/graphql
   tags:
+  - GraphQL
+  - DeFi
+  - Lending
+  - On-Chain Data
+  tags_raw:
   - GraphQL
   - DeFi
   - Lending
