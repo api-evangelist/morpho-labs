@@ -10,6 +10,17 @@ description: >-
   and offchain data for markets, vaults, positions, curators, oracles, assets,
   rewards, and transactions, plus a suite of TypeScript SDKs for building and
   simulating transactions, and detailed documentation at docs.morpho.org.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
